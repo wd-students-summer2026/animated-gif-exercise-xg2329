@@ -1,0 +1,101 @@
+<!-- insert your HTML code here -->
+<!-- don't forget to make two other HTML documents also -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Xinyue Gao | About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body class="bg-[#fffaf7] text-slate-800">
+    <div class="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
+        <!-- Navigation bar for all pages -->
+        <nav x-data="{ open: false }" class="rounded-[24px] bg-white p-4 shadow-md">
+            <div class="flex items-center justify-between gap-4">
+                <a href="professional_site.html"
+                    class="text-lg font-bold text-[#8b4b63] rounded-full px-3 py-2 transition uppercase hover:bg-[#fff1ea]">Xinyue Gao</a>
+                <button @click="open = !open" type="button" aria-label="Toggle navigation menu"
+                    class="flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-700 md:hidden">
+                    <span class="sr-only">Toggle navigation menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                </button>
+            </div>
+            <div :class="{ 'hidden': !open, 'flex': open }"
+                class="mt-4 flex-col gap-2 text-sm md:mt-3 md:flex md:flex-row md:items-center md:gap-4">
+                <a href="school_projects.html" class="rounded-full px-3 py-2 transition hover:bg-[#eef5ff]">School
+                    Projects</a>
+                <a href="travel_days.html" class="rounded-full px-3 py-2 transition hover:bg-[#fff1ea]">Travel Days</a>
+            </div>
+        </nav>
+
+        <main class="mt-8 space-y-6">
+            <!-- Intro section -->
+            <section
+                class="grid gap-6 rounded-[28px] bg-gradient-to-r from-[#fff1ea] to-[#f6f8ff] p-6 md:grid-cols-2 md:p-8">
+                <div>
+                    <p class="text-sm font-semibold uppercase text-[#8b4b63]">About me</p>
+                    <h1 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Hi, I am Xinyue Gao.</h1>
+                    <p class="mt-4 leading-8 text-slate-600">
+                        This small website introduces who I am, what I learned in this
+                        class,
+                        and what I enjoy outside school.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-3 text-sm">
+                        <span class="rounded-full bg-white px-4 py-2">Engineering student</span>
+                        <span class="rounded-full bg-white px-4 py-2">Learning web design</span>
+                        <span class="rounded-full bg-white px-4 py-2">Enjoys travel</span>
+                    </div>
+                </div>
+                <figure class="photo-frame rounded-[24px] bg-white p-3">
+                    <img src="images/sea.jpg" alt="sea photo"
+                        class="h-72 w-full rounded-[18px] object-cover" />
+                </figure>
+            </section>
+
+            <!-- Simple content blocks -->
+            <section class="grid gap-4 lg:grid-cols-3">
+                <article class="soft-card rounded-[24px] bg-white p-5 shadow-sm">
+                    <h2 class="text-xl font-semibold text-slate-900">Who I am</h2>
+                    <p class="mt-3 leading-8 text-slate-600">
+                        I am an engineering student from China. I like learning new tools.
+                    </p>
+                </article>
+                <article class="soft-card rounded-[24px] bg-white p-5 shadow-sm">
+                    <h2 class="text-xl font-semibold text-slate-900">What I study</h2>
+                    <p class="mt-3 leading-8 text-slate-600">
+                        In school, I am learning how to think clearly and solve problems. I also started learning
+                        website design in this course.
+                    </p>
+                </article>
+                <article class="soft-card rounded-[24px] bg-white p-5 shadow-sm">
+                    <h2 class="text-xl font-semibold text-slate-900">What I enjoy</h2>
+                    <p class="mt-3 leading-8 text-slate-600">
+                        Outside class, I like traveling and looking at beautiful views. I also like to spent time with my dog.
+                    </p>
+                </article>
+            </section>
+
+            <section class="rounded-[28px] bg-white p-6 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900">This website</h2>
+                <p class="mt-4 leading-8 text-slate-600">
+                    The second page shows my school projects, and the third page shows the pictures from my traveling.
+                </p>
+            </section>
+        </main>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-sm text-slate-500 underline underline-offset-4">Back to home</a>
+        </div>
+    </div>
+</body>
+
+</html>
